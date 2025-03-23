@@ -53,16 +53,31 @@ const flightReservation = {
 
 // 0. Nos han modificado la puerta de embarque, a la C77
 flightReservation.gate = "C77";
-console.log("Nueva puerta de embarque: ", flightReservation.gate);
+console.log("Nueva puerta de embarque:", flightReservation.gate);
 
 // 1. El vuelo se ha retrasado. Modifica la propiedad flightStatus a "Delayed"
 
+flightReservation.flightStatus = "Delayed";
+console.log(flightReservation.flightStatus);
+
 // 2. Como compensación del restraso, nos han cambiado el ticket a 'First Class'
+
+flightReservation.ticketClass = "First Class";
+console.log(flightReservation.ticketClass);
 
 // 3. Como consequencia del retraso, ahora la hora estimada de salida es 9:30 AM. Modifica la propiedad adecuada
 
+flightReservation.departure.time = "09:30 AM";
+console.log(flightReservation.departure.time);
+
 // 4. Acaban de actualizar los tipos de comidas especiales que sirven en el avión. Añade la opción "Vegan"
 
+flightReservation.specialMeals.push("Vegan");
+console.log(flightReservation.specialMeals);
+
 // 5. Por el retraso del avión nos van a aplicar un 15% de descuento sobre el precio del billete. Actualiza el precio total del billete con el nuevo valor, pero mantén el formato! totalPrice: '$999.99'
+let newPrice = 450 - (450*0.15);
+flightReservation.totalPrice = newPrice.toFixed(2);
+console.log(`$${flightReservation.totalPrice}`);
 
 //console.log(flightReservation);
